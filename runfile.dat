@@ -1,0 +1,59 @@
+
+# model and initial configuration
+model    = ViscLyo
+nsteps   = 400000
+nstart   = 0
+ninfo    = 2000
+LX       = 400
+LY       = 400
+bc	 = 0
+
+# phi parameters...
+GammaP   = 0.33
+AA       = 1
+KK       = 1
+L_thermo = 0.0
+
+# fluid parameters
+rho      = 40
+friction = 0.00
+tauNem   = 3.5
+tauIso   = 3.5
+
+#viscoelastic parameters
+EE2        = 0.1
+EE1        = 0.005
+#LL_TT      = 1e-8
+#eta_P_ratio= 1
+sigma_model = KV
+
+# active nematic parameters
+GammaQ   = 0.33
+xi       = 0.1
+CC       = 0.1
+LL       = 0.1
+zeta     = 0.07
+S_nem    = 1
+
+GammaQ2   = 0.33
+CC2       = 0.02
+LL2       = 0.01
+zeta2     = 0.00
+S_nem2    = 0.0
+
+#simulation settings
+nsteps_FD = 50
+#debugMode = false
+backflow_on = true
+#isGuo = true
+#fixPhi      = false
+
+# initial configuration options...
+config   = Circle
+radius   = 100
+angle    = 0.0
+noise    = 1.0
+level    = 0.25
+n_preinit= 100
+npc	 = 0
+init_seed   = 1234567890
